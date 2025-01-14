@@ -2,13 +2,13 @@ import sqlite3 from "sqlite3";
 sqlite3.verbose();
 
 // open database
-const db = new splite3.Database("mydatabase.db");
+const db = new sqlite3.Database("mydatabase.db");
 
 // create table
 
 db.serialize(() => {
 	db.run(
-		"CREATE TABLE IF NOT EXISTS items (id INTEGER PRIMARY KEY, name TEXT NOT NULL, category TEXT, price REAL"
+		"CREATE TABLE IF NOT EXISTS items (id INTEGER PRIMARY KEY, name TEXT NOT NULL, category TEXT, price REAL)"
 	);
 
 	// insert data
